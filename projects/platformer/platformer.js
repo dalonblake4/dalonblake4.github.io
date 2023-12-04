@@ -28,12 +28,12 @@ $(function () {
      * Comment the lines out to remove the grid
      */
 
-    // for (let i = 100; i < canvas.width; i += 100) {
-    //   createPlatform(i, canvas.height, -1, -canvas.height);
-    // }
-    // for (let i = 100; i < canvas.height; i += 100) {
-    //   createPlatform(canvas.width, i, -canvas.width, -1);
-    // }
+    for (let i = 100; i < canvas.width; i += 100) {
+      createPlatform(i, canvas.height, -1, -canvas.height);
+    }
+    for (let i = 100; i < canvas.height; i += 100) {
+      createPlatform(canvas.width, i, -canvas.width, -1);
+    }
 
     /////////////////////////////////////////////////
     //////////ONLY CHANGE BELOW THIS POINT///////////
@@ -43,16 +43,20 @@ $(function () {
     // Create platforms
     // You must decide the x position, y position, width, and height of the platforms
     // example usage: createPlatform(x,y,width,height)
+    createPlatform(850, 530, 150, 25);
+    createPlatform(400, 250, 150, 25);
+    createPlatform(1150, 450, 150, 25);
+    createPlatform(600, 350, 150, 25);    
+    createPlatform(450, 650, 150, 25);
 
-
-
-    
     // TODO 2
     // Create collectables
     // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
-
+    createCollectable("max", 400, 160, .5, 1);
+    createCollectable("diamond", 700, 300, .5, 1);
+    createCollectable("steve", 1250, 400, .5, 1);
 
 
 
@@ -61,7 +65,9 @@ $(function () {
     // You must decide the wall you want the cannon on, the position on the wall, and the time between shots in milliseconds
     // Your wall choices are: 'top' 'left' 'right' and 'bottom'
     // example usage: createCannon(side, position, delay, width, height)
-
+    createCannon("top", 200, 600, 25,25);
+    createCannon("right", 400, 600, 25,25);
+    createCannon("bottom", 700, 600, 25,25);
 
 
 
